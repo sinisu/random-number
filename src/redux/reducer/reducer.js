@@ -19,6 +19,8 @@ function reducer(state = initialState, action) {
             return {...state,count: 0};
         case "CLICK" :
             return {...state,click: state.click + 1};
+        case "CLICKZERO" : 
+            return {...state,click: -1};
         default :
             return {...state};
     }

@@ -14,6 +14,8 @@ function reducer(state = initialState, action) {
             return {...state,count: state.count - action.payload.num};
         case "RANDOM" : 
             return {...state,random: Math.floor(Math.random()*100)};
+        case "NEWNUMBER" : 
+            return {...state,count: 0}
         default :
             return {...state};
     }

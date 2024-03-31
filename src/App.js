@@ -1,7 +1,6 @@
 
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import Box from './component/Box';
 
 function App() {
   const dispatch = useDispatch()
@@ -10,6 +9,7 @@ function App() {
 
   const randomGame = () => {
     dispatch({type:"RANDOM"})
+    dispatch({type:"NEWNUMBER"})
 }
 
   const plusOne = () => {
@@ -39,7 +39,7 @@ function App() {
           <h1>Random</h1>
           <h2>{random}</h2>
         </div>
-        <div><h1>{result}</h1></div>
+        <div className='ura'><h1 className='result'>{result}</h1></div>
         <div className='number-child'>
           <h1>My Number</h1>
           <h2>{count}</h2>
@@ -47,8 +47,8 @@ function App() {
       </div>
       
       <div>
-        <button onClick={plusOne}>+++</button>
-        <button onClick={minusOne}>---</button>
+        <button onClick={plusOne}>+ 5 +</button>
+        <button onClick={minusOne}>- 3 -</button>
       </div>
     </div>
   );

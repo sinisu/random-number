@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(12, 12, 87);
+}
+
 .game{
     display: flex;
     flex-direction: column;
@@ -16,6 +20,19 @@
 
 .number-child {
     background-color: azure;
+    padding: 2rem;
+    margin:0.5rem;
     width: 30%;
-    margin: ;
+}
+
+.result {
+    position: absolute;
+    padding: 1rem 2rem;
+    background-color: greenyellow;
+}
+
+.ura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

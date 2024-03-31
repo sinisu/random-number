@@ -22,12 +22,12 @@ body {
     background-color: azure;
     padding: 2rem;
     margin:0.5rem;
-    width: 30%;
+    width: 35%;
 }
 
 .result {
     position: absolute;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background-color: greenyellow;
 }
 

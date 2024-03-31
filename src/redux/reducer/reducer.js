@@ -1,6 +1,6 @@
 let initialState = {
     count:0,
-    random:0
+    random:0,
 };
 
 

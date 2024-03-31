@@ -2,12 +2,13 @@
 import { type } from '@testing-library/user-event/dist/type';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const dispatch = useDispatch()
   const count = useSelector(state=>state.count);
   const random = useSelector(state=>state.random);
+  const click = useSelector(state=>state.click);
   const [display,setDisplay] = useState("none");
 
   const randomGame = () => {
@@ -48,6 +49,10 @@ function App() {
       result = "That's right!!"
     }
 
+    useEffect(()=>{
+      dispatch({type:"CLICK"})
+    },[count])
+
   return (
     <div className='game'>
       <div>
@@ -69,6 +74,7 @@ function App() {
         <button onClick={plusOne} className='pm-btn'>+ 5 +</button>
         <button onClick={minusOne} className='pm-btn'>- 3 -</button>
       </div>
+      <h3>CLICK : {click}</h3>
     </div>
   );
 }

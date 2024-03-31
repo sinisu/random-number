@@ -51,23 +51,23 @@ function App() {
   return (
     <div className='game'>
       <div>
-        <button onClick={randomGame}>NEW GAME</button>
+        <button onClick={randomGame} className='new-btn'>*NEW GAME*</button>
       </div>
       <div className='number-box'>
         <div className='number-child'>
           <h1>RANDOM</h1>
-          <h2>{random}</h2>
+          <span>{random}</span>
         </div>
-        <div className='ura'><h1 className='result' style={{display:display}}>{result}</h1></div>
+        <div className='ura'><h3 className='result' style={{display:display}}>{result}</h3></div>
         <div className='number-child'>
           <h1>USER NUMBER</h1>
-          <h2>{count}</h2>
+          <span>{count}</span>
         </div>
       </div>
       
       <div>
-        <button onClick={plusOne}>+ 5 +</button>
-        <button onClick={minusOne}>- 3 -</button>
+        <button onClick={plusOne} className='pm-btn'>+ 5 +</button>
+        <button onClick={minusOne} className='pm-btn'>- 3 -</button>
       </div>
     </div>
   );

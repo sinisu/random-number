@@ -20,7 +20,7 @@ function reducer(state = initialState, action) {
         case "CLICK" :
             return {...state,click: state.click + 1};
         case "CLICKZERO" : 
-            return {...state,click: -1};
+            return {...state,click: action.payload.num};
         default :
             return {...state};
     }

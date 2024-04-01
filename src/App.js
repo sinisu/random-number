@@ -15,7 +15,11 @@ function App() {
     dispatch({type:"RANDOM"})
     dispatch({type:"NEWNUMBER"})
     setDisplay("none");
-    dispatch({type:"CLICKZERO"})
+    if (count>0) {
+      dispatch({type:"CLICKZERO",payload:{num:-1}})
+    } else {
+      dispatch({type:"CLICKZERO",payload:{num:0}})
+    }
 }
 
   const plusOne = () => {
